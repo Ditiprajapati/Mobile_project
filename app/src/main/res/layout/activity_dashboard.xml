@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#FFF"
+        android:gravity="center"
+        android:padding="20dp"/>
+
+    <!-- Cards Layout -->
+    <LinearLayout
+        android:layout_below="@id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Total Students Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="15dp"
+            card_view:cardCornerRadius="16dp"
+            card_view:cardElevation="8dp">
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Total Students: 50"
+                android:textSize="18sp"
+                android:gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Present Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="15dp"
+            card_view:cardCornerRadius="16dp"
+            card_view:cardElevation="8dp">
+
+            <TextView
+                android:id="@+id/tvPresent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Present: 40"
+                android:textSize="18sp"
+                android:gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Absent Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="20dp"
+            card_view:cardCornerRadius="16dp"
+            card_view:cardElevation="8dp">
+
+            <TextView
+                android:id="@+id/tvAbsent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Absent: 10"
+                android:textSize="18sp"
+                android:gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnAttendance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mark Attendance"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Profile"/>
+
+    </LinearLayout>
+
+    <!-- Popup Menu Button -->
+    <ImageView
+        android:id="@+id/menuBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="15dp"
+        android:src="@android:drawable/ic_menu_more"/>
+
+</RelativeLayout>
